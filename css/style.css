@@ -1,0 +1,570 @@
+/* Start Variables */
+
+:root {
+    --mainColor: #ed1d24;
+    --secondaryColor: #08526D;
+    --mainBackground: #F0F5F7;
+    --mainTransition: all .5s ease-in-out;
+    --mainPadding: 100px 0;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--secondaryColor);
+}
+
+/* End Variables */
+
+/* Start Global Style */
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {box-sizing: border-box}
+
+body {text-transform: capitalize;font-family: cursive}
+
+img {width: 100%}
+
+a {text-decoration: none !important}
+
+.back {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+}
+
+ul {list-style: none}
+
+/* End Global Style */
+
+/* Start Upper Bar */
+
+header {background-color: var(--secondaryColor);color: #dddddd;}
+
+header .word {margin: 15px 0}
+
+header i {margin: 0 5px;cursor: pointer}
+
+header span {display: inline-block;margin-right: 15px;cursor: pointer}
+
+@media (max-width: 768px) {
+    header .word {margin: 0}
+    header span {margin: 8px}
+}
+
+header a {color: #dddddd}
+
+header a:hover {color: #FFF;text-decoration: none}
+
+header span:first-of-type:hover {color: #FFF}
+
+header .get-quote {border: 1px solid var(--mainColor);padding: 0px 13px;margin-left: 10px}
+
+header .get-quote:hover {background-color: var(--mainColor)}
+
+/* End Upper Bar */
+
+/* Start Navbar */
+
+.navbar {
+    padding: 0;
+    position: sticky;
+    top: 0px;
+    width: 100%;
+    z-index: 13;
+}
+
+.navbar-light .navbar-brand {color: var(--secondaryColor);font-size: 46px;font-weight: 600}
+
+.navbar-light .navbar-brand:hover {color: var(--secondaryColor)}
+
+.navbar-light .navbar-brand span {color: var(--mainColor);font-weight: 400;font-size: smaller}
+
+.navbar a.nav-link {font-size: 18px;color: var(--secondaryColor) !important}
+
+.navbar a.nav-link:hover {color: var(--mainColor) !important}
+
+/* End Navbar */
+
+/* Start Slider */
+
+.slider {overflow: hidden}
+
+.carousel-inner div {background-size: cover;background-repeat: no-repeat;position: relative}
+
+.carousel-inner .one {background-image: url('../img/slider1.jpg');background-position: 50% 20%}
+
+.carousel-inner .two {background-image: url('../img/slider2.jpeg');background-position: 50% 70%}
+
+.carousel-inner .three {background-image: url('../img/slider3.jpeg');background-position: 50% 40%}
+
+.slider h1 {
+    margin: 0;
+    position: absolute;
+    top: 30%;
+    left: 12%;
+    font-size: 55px;
+    max-width: 600px;
+    color: #FFF;
+    line-height: 1.4;
+}
+
+.slider h1 span {
+    background-color: var(--mainColor);
+    padding: 0 6px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+@media (max-width: 600px) {
+    .slider h1 {font-size: 20px;top: 32%;left: 14%}
+}
+
+@media (max-width: 768px) {
+    .slider h1 {font-size: 24px;top: 27%;left: 13%}
+}
+
+.slider .carousel-control-prev-icon,
+.slider .carousel-control-next-icon {background-image: none;width: 50px;height: 48px}
+
+.slider i.fas.fa-chevron-right,
+.slider i.fas.fa-chevron-left {background: #333;padding: 16px 20px}
+
+.slider i.fas.fa-chevron-right:hover,
+.slider i.fas.fa-chevron-left:hover {background-color: var(--mainColor)}
+
+.slider .carousel-control-prev {left: -10%;overflow: hidden}
+
+.slider .carousel-control-next {right: -10%;overflow: hidden}
+
+.slider .carousel-control-prev,
+.slider .carousel-control-next {
+    opacity: 0 !important;
+    transition: all .5s !important;
+    -webkit-transition: all .5s !important;
+    -moz-transition: all .5s !important;
+    -ms-transition: all .5s !important;
+    -o-transition: all .5s !important;
+}
+
+.slider:hover .carousel-control-prev,
+.slider:hover .carousel-control-next {opacity: 1 !important}
+
+.slider:hover .carousel-control-prev {left: -3%}
+
+.slider:hover .carousel-control-next {right: -3%}
+
+@media (max-width: 768px) {
+
+    .slider:hover .carousel-control-prev {left: -1%}
+
+    .slider:hover .carousel-control-next {right: -1%}
+}
+
+.slider .carousel-indicators li {width: 38px}
+
+/* End Slider */
+
+/* Start Features */
+
+.features {padding: var(--mainPadding)}
+
+.features .row div:nth-of-type(2) {animation-delay: .1s}
+
+.features .row div:nth-of-type(3) {animation-delay: .2s}
+
+.features .row div:last-of-type {animation-delay: .3s}
+
+.features .info i {
+    font-size: 18px;
+    background: var(--mainColor);
+    width: 60px;
+    height: 60px;
+    color: #FFF;
+    line-height: 60px;
+}
+
+.features .info h3 {margin: 20px 0 13px;font-size: 23px;color: var(--secondaryColor)}
+
+.features .info p {
+    line-height: 1.7;
+    color: #8B999F;
+    font-size: 15px;
+    margin-bottom: 35px;
+}
+
+/* End Features */
+
+/* Start Overview */
+
+.overview {padding: var(--mainPadding);background-color: var(--mainBackground)}
+
+.overview h2 {font-size: 40px;font-weight: 500}
+
+.overview p {max-width: 691px;margin: 25px auto;font-size: 18px}
+
+@media (max-width: 768px) {
+    .overview p {font-size: 15px;}
+}
+
+.overview h5 {max-width: 612px;margin: 25px auto}
+
+/* End Overview */
+
+/* Start Work */
+
+.work {padding: var(--mainPadding)}
+
+.work .nav {justify-content: center}
+
+.work .nav-pills .nav-link.active {
+    background-color: var(--mainColor);
+    border: 1px solid var(--mainColor);
+    margin-bottom: 10px;
+}
+
+.work .nav-pills .nav-link.active,
+.work .nav-pills .nav-link {color: #FFF;margin-right: 10px}
+
+.work .nav-pills .nav-link {color: var(--secondaryColor);border: 1px solid var(--secondaryColor)}
+
+.work .tab-content {margin-top: 50px;margin-bottom: 30px}
+
+.work .tab-content .row .overlay {position: relative}
+
+.work .tab-content .row .overlay .back {opacity: 0;cursor: pointer;background-color: rgba(0, 0, 0, 0.9)}
+
+.work .tab-content .row .overlay .back .word {
+    padding: 100px 0;
+    border: 1px solid var(--mainColor);
+    width: 80%;
+    height: 80%;
+    margin: 10% auto;
+}
+
+.work .tab-content .row .overlay .back .word h5 {
+    color: var(--mainColor);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.work .tab-content .row .overlay .back .word p {color: #FFF;margin-top: 15px}
+
+.work .tab-content .row .overlay:hover .back {opacity: 1}
+
+/* End Work */
+
+/* Start Post */
+
+.post {padding-bottom: 70px}
+
+.post .card {margin-top: 25px;background: none;border: 0}
+
+.post .card-body {padding: 30px 0}
+
+.post .card-body h2 {color: var(--secondaryColor)}
+
+.post .card-body time {margin-bottom: 15px;display: block;color: #8B999F}
+
+.post p.card-text {line-height: 1.7;font-size: 14px;color: #646770}
+
+.post .card-body a {color: var(--mainColor)}
+
+.post .card-body a:hover {color: var(--secondaryColor)}
+
+.post .card-body a i {margin-left: 6px;color: var(--mainColor);font-size: 16px}
+
+.post .card-body a:hover i {margin-left: 10px;color: var(--secondaryColor)}
+
+.post .card.one {animation-delay: 0s}
+
+.post .card.two {animation-delay: .1s}
+
+.post .card.three {animation-delay: .2s}
+
+/* End Post */
+
+/* start Testimonials */
+
+.testimonials {
+    background-image: url('../img/photo-1543269865-4430f94492b9.jfif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+.testimonials .carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    width: 60%;
+}
+
+.testimonials .image {
+    background-image: url('../img/1t.jpeg');
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    margin-bottom: 15px;
+}
+
+.testimonials .carousel-control-prev-icon,
+.testimonials .carousel-control-next-icon {background-image: none}
+
+.testimonials i.fas.fa-chevron-right,
+.testimonials i.fas.fa-chevron-left {background: #333;padding: 16px 20px}
+
+.testimonials i.fas.fa-chevron-right:hover,
+.testimonials i.fas.fa-chevron-left:hover {background-color: var(--mainColor)}
+
+.testimonials .carousel-control-prev {left: -15%}
+
+.testimonials .carousel-control-next {right: -10%}
+
+.testimonials .carousel-control-prev,
+.testimonials .carousel-control-next {
+    opacity: 0 !important;
+    transition: all .5s !important;
+    -webkit-transition: all .5s !important;
+    -moz-transition: all .5s !important;
+    -ms-transition: all .5s !important;
+    -o-transition: all .5s !important;
+}
+
+.testimonials:hover .carousel-control-prev,
+.testimonials:hover .carousel-control-next {opacity: 1 !important}
+
+.testimonials .carousel-indicators li {width: 38px}
+
+.testimonials:hover .carousel-control-prev {left: -5%}
+
+.testimonials:hover .carousel-control-next {right: 0%}
+
+/* End Testimonials */
+
+/* Start Pricing Table */
+
+.pricing-table {padding: var(--mainPadding);background-color: #f7f7f7}
+
+.pricing-table .card {
+    padding: 50px 0;
+    background-color: #FFF;
+    margin-top: 35px;
+    cursor: pointer;
+    position: relative;
+    top: 0;
+    transition-duration: .4s;
+}
+
+.pricing-table .card:hover {box-shadow: 0px 0px 20px #ddd;top: -10px}
+
+.pricing-table .card-body {padding: 0}
+
+.pricing-table .card h5 {font-size: 25px;color: var(--secondaryColor)}
+
+.pricing-table .card p {margin-bottom: 25px}
+
+.pricing-table .card h6 {
+    background-color: #f7f7f7;
+    padding: 25px 0;
+    font-size: 38px;
+    margin-bottom: 15px;
+    color: var(--secondaryColor);
+}
+
+.pricing-table .card h6.active {background-color: var(--mainColor);color: #FFF}
+
+.pricing-table .card h6 span {font-size: 14px}
+
+.pricing-table .card ul li {line-height: 2;padding: 10px 0}
+
+/* End Pricing Table */
+
+/* Start Why Choose Us */
+
+.choose-us {color: #FFF;overflow: hidden}
+
+.choose-us .info {overflow: hidden}
+
+.choose-us img {width: calc(100% + 100px)}
+
+.choose-us .word {
+    width: 100%;
+    padding: 10% 0 0 50px;
+    height: 100%;
+    background-color: var(--secondaryColor);
+}
+
+@media (max-width: 1200px) {
+    .choose-us .word {padding: 50px 0 50px 50px;}
+}
+
+.choose-us h2 {font-size: 35px;font-weight: 500}
+
+.choose-us p {line-height: 1.7;margin: 20px 0 30px;padding-right: 50px}
+
+/* End Why Choose Us */
+
+/* Start Statistics */
+
+.stat {padding: var(--mainPadding)}
+
+.stat .word {color: var(--secondaryColor)}
+
+.stat .word i {font-size: 30px}
+
+.stat .word h4 {font-size: 35px;margin: 10px 0}
+
+.stat .word p {color: var(--mainColor);margin-bottom: 30px}
+
+/* End Statistics */
+
+/* Start Contact Us */
+
+.contact-us {background-color: var(--mainColor);padding: var(--mainPadding);color: #FFF}
+
+.contact-us .word h4 {margin-top: 5px}
+
+@media (max-width:992px) {
+    .contact-us .word h4 {font-size: 20px;margin-bottom: 20px;}
+}
+
+.contact-us .word button {border: 2px solid #FFF}
+
+/* End Contact Us */
+
+/* Start Footer */
+
+/* Start Upper-footer */
+
+footer .upper-footer {padding: var(--mainPadding)}
+
+footer .upper-footer .word h2 {font-size: 40px;margin-bottom: 30px;color: var(--secondaryColor)}
+
+footer .upper-footer .word h2 span {color: var(--mainColor)}
+
+footer .upper-footer .word p {line-height: 1.7;color: #555}
+
+footer .upper-footer .word h3 {margin-top: 20px;margin-bottom: 20px}
+
+footer .upper-footer .word ul {display: inline-block}
+
+footer .upper-footer .word ul li {width: 135px;padding: 5px 0}
+
+footer .upper-footer .word ul li i {font-size: 13px}
+
+footer .upper-footer ul.moving {margin-right: 50px}
+
+@media (max-width: 1200px) {
+    footer .upper-footer ul.moving {margin-right: 15px;}
+}
+
+footer .upper-footer .word a.one i {margin-left: 10px;color: var(--secondaryColor)}
+
+footer .upper-footer .word a.one:hover i {margin-left: 15px;color: var(--mainColor)}
+
+footer .upper-footer .word a {color: var(--secondaryColor)}
+
+footer .upper-footer .word a:hover {color: var(--mainColor)}
+
+footer .upper-footer .word a:not(.one) {margin-left: 9px;color: var(--secondaryColor);font-size: 16px}
+
+footer .upper-footer .word a:not(.one):hover {margin-left: 13px;color: var(--mainColor)}
+
+footer .upper-footer .special ul li {color: #555;width: auto}
+
+/* End Upper-footer */
+
+/* Start Under-Footer */
+
+footer .under-footer {border-top: 1px solid #dde4e5;padding: 40px 0 20px}
+
+footer .under-footer p {font-size: 18px}
+
+@media (max-width:992px) {
+    footer .under-footer p {margin-bottom: 20px;}
+}
+
+footer .under-footer i {font-size: 18px;margin-right: 15px;cursor: pointer}
+
+@media (max-width: 768px) {
+    footer .under-footer i {margin-bottom: 20px;}
+}
+
+footer .under-footer i:hover:first-of-type {color: #3b5998}
+
+footer .under-footer i:hover:nth-of-type(2) {color: #1DA1F2}
+
+footer .under-footer i:hover:nth-of-type(3) {color: #0e76a8}
+
+footer .under-footer i:hover:nth-of-type(4) {color: var(--mainColor)}
+
+footer .under-footer i:hover:last-of-type {color: var(--mainColor)}
+
+/* End Under-Footer */
+
+/* End Footer */
+
+/* Start My Framework */
+
+.text h2 {font-size: 45px;font-weight: 500;margin-bottom: 40px}
+
+.text p {max-width: 885px;margin: 25px auto;font-size: 18px}
+
+.bt {
+    padding: 14px 35px;
+    font-size: 17px;
+    background-color: var(--mainColor);
+    color: #FFF;
+    border: 1px solid var(--mainColor);
+    text-transform: capitalize;
+    transition: var(--mainTransition) !important;
+    -webkit-transition: var(--mainTransition) !important;
+    -moz-transition: var(--mainTransition) !important;
+    -ms-transition: var(--mainTransition) !important;
+    -o-transition: var(--mainTransition) !important;
+}
+
+.bt:hover {background-color: var(--secondaryColor);border: 1px solid var(--secondaryColor)}
+
+.hvr-sweep-to-right:before {background: var(--secondaryColor) !important}
+
+.transition {
+    transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+}
+
+/* End My Framework */

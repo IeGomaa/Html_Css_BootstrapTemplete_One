@@ -37,7 +37,7 @@ html {
 
 * {box-sizing: border-box}
 
-body {text-transform: capitalize;font-family: cursive}
+body {text-transform: capitalize;font-family: 'Kalam', cursive;}
 
 img {width: 100%}
 
